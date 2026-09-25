@@ -34,7 +34,7 @@ spec:
       backendRefs:
         - group: ""
           kind: Service
-          name: {{ include "zammad.fullname" . }}
+          name: {{ include "zammad.fullname" . }}-nginx
           port: {{ .Values.service.port }}
       {{- with .Values.httpRoute.timeouts }}
       timeouts:
